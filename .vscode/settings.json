@@ -3,6 +3,15 @@
         "iostream": "cpp",
         "queue": "cpp",
         "stack": "cpp",
-        "xlocale": "cpp"
+        "xlocale": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp",
+        "chrono": "cpp",
+        "forward_list": "cpp",
+        "ostream": "cpp"
     }
 }
