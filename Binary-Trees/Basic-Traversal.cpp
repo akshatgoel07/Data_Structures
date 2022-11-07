@@ -22,7 +22,6 @@ void preorder(struct Node* root){
     preorder(root->left);
     preorder(root->right);
 
-    
 }
 
 void inorder(struct Node* root){
@@ -42,6 +41,31 @@ void postorder(struct Node* root){
     cout<<root->data<<" ";
 }
 
+void printLevelOrder(Node* root){
+    if(root==NULL) return;
+    
+    queue<Node*> q;
+    q.push(root);
+    q.push(NULL);
+    
+    while(!q.empty()){
+        Node* fr= q.front();
+        q.pop();
+        if(fr!=NULL){
+            cout<<fr->data<<" ";
+            if(fr->left!=NULL){
+                q.push(fr->left);
+            }
+            if(fr->right!=NULL){
+                q.push(fr->right);
+            }
+        }
+        else if(!q.empty()){
+            q.push(NULL);
+        }
+    }
+}
+
 int main()
 {
 
@@ -56,7 +80,8 @@ int main()
     cout<<endl;
     inorder(root);
     cout<<endl;
-    postorder(root);
-
+    postorder(root); 
+    cout<<endl;
+    printLevelOrder(root);
     return 0;
 }

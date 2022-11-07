@@ -7,7 +7,7 @@ int tree[4*N];  // total no. of nodes = 2n-1, but for safety we use 4n
 
 void build(int node, int st, int en){
     // base case for leaf node 
-    if(st==en){
+    i   f(st==en){
         tree[node]=a[st];
         return;
     }
