@@ -3,7 +3,7 @@ using namespace std;
 
 class Node
 {
-public:
+    public:
     int data;
     Node *left, *right;
 
@@ -29,22 +29,20 @@ Node *insertBST(Node *root, int val)
     }
     else
     {
-        root->right = insertBST(root->right, root->data);
+        root->right = insertBST(root->right, val);
     }
 
     return root;
 }
 
-void inor(Node *root)
+void inorg(Node *root)
 {
     if (root == NULL)
         return;
-    inor(root->left);
+    inorg(root->left);
     cout << root->data << " ";
-    inor(root->right);
+    inorg(root->right);
 }
-
-
 
 int main()
 {
@@ -55,6 +53,6 @@ int main()
     insertBST(root, 4);
     insertBST(root, 2);
     insertBST(root, 7);
-    inorder(root);
+    inorg(root);
     return 0;
 }
