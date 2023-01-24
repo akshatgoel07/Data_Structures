@@ -35,6 +35,10 @@ Node *insertBST(Node *root, int val)
     return root;
 }
 
+void deleteBST(int val){
+    
+}
+
 void inorg(Node *root)
 {
     if (root == NULL)
@@ -43,6 +47,12 @@ void inorg(Node *root)
     cout << root->data << " ";
     inorg(root->right);
 }
+
+Node
+
+
+
+
 
 int main()
 {
