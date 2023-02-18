@@ -1,5 +1,6 @@
 class Solution
 {
+	// TIME COMPLEXITY - O(V+E)
 	public:
 	vector<int> topoSort(int V, vector<int> adj[]) 
 	{
